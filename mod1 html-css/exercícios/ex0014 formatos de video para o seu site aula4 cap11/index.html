@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>videos com html5</title>
+</head>
+<body>
+    <!--OBSERVACAO:meu navegador nao e compativel com video em formato ogv-->
+    <!--aula 05 cap 11 inserindo videos-->
+<!--!hospedar videos diretamente com a tag video faz com que o site fique lento e pesado-->
+    <h1>inserindo videos hospedados localmente</h1> 
+    <p>este video esta hospedado no meu proprio servidor</p>
+    <video src="midia/meuvideomkv.mkv" width="500" controls></video>
+
+    <!--outras formas de hospedar videos-->
+    <!--vai carregar o 1 formato se nao carregar, carregara o segundo e assim em diante-->
+    <video width="560" poster="imagens/thumb.png" controls autoplay loop>
+        <source src="midia/meuvideomkv.mkv" type="video/m4v">
+        <source src="midia/meuvideowebm.webm" type="video/webm">
+        <source src="midia/meuvideoogv.ogv" type="video/ogg">
+        <p>seu navegador não suporta o formato de vídeo selecionado</p>
+    </video>
+    <!--aula 6 cap11 Incorporação de vídeos externos-->
+    <!--clicar em opcao incorporar no video do youtube e copiar e colar-->
+    <!--melhor formato para video ->m4v ou mkv-->
+    <!--plataforma vimeo deixa video publico ou privado sem interrupcao-->
+    <h1>incorporando videos externos</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/K9rzIwPS43U?si=odyxm-BqBLyez5kh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h1>inserindo videos do vimeo</h1>
+    <iframe src="https://player.vimeo.com/video/8147944?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="560" height="420" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Animation Reel"></iframe>
+</body>
+</html>

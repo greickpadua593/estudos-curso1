@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>midias em HTML5</title>
+</head>
+
+<body>
+    <!--aula 2 cap 11-->
+    <h1>Imagem dinamica</h1>
+    <p>tente abrir esse site em varios dispositivos diferentes ou simplesmente aumente o tamanho do seu navegador</p>
+    <!--vai carregar a foto g mas se for menor que 750px ira carregar a foto p-->
+    <!--vai carregar a foto g mas se for menor que 1000px ira carregar a foto m-->
+    <!--outro source seja para imagem pequena depois da imagem media precisa ficar acima-->
+    <!--50px so para imagem melhorar-->
+    <picture>
+        <source media="(max-width:750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <!--imagem persistente definitiva que vai ser usada para trabalhar com dinamicidade entre telas-->
+        <img src="imagens/foto-g.png" alt="imagem flexivel">
+    </picture>
+
+    <!--aula 3 cap11-->
+    <!--nem todos os navegadores possuem compatibilidade com MP3-->
+    <!--outras compatibilidades incluem wav e ogg-->
+    <h2>Reproduzindo audio</h2>
+    <p>vamos aprender a reproduzir audio em HTML5</p>
+    <audio src="midia aula 2 cap11/besideme-patrickpatrikios.mp3" controls autoplay></audio>
+
+    <!--auto= so considera que o site terminou de carregar depois que vc carregar o audio tambem
+metadata=carrega informacoes basicas como data, duracao, nome do arquivo
+nam= nao mostra nada, a nao ser que o usuario mecha nos controles-->
+<!--loop=recomeca automaticamente quando termina-->
+
+
+ <!--basicamente de acordo com os sources, se o navegador nao executar o primeiro audio, ira executar o segundo, se nao executar o seguundo, executara o terceiro e assim por diante-->
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midia aula 2 cap11/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia aula 2 cap11/guanacast-33.ogg" type="audio/ogg">
+        <source src="midia aula 2 cap11/guanacast-33.wav" type="audio/wav">
+        <p>infelizmente, seu navegador não suporta esse formato de áudio. E nem reproduzira <a
+                href="midia aula 2 cap11/guanacast-33.mp3">Clique aqui para fazer o download do arquivo MP3</a></p>
+    </audio>
+    <!--aula 4 cap 11-->
+    <!--tipos de arquivos compativeis com videos:
+    mp4, m4v, webm, ogv-->
+    <!--app handbrake para converter videos-->
+    <!--nao hospedar videos 4K ou ate mesmo 1080p em hospedagem local, alem de pagar caro vai pesar o seu site, por isso, qualidade minima viavel flexiva, geralmente arquivo mp4-->
+</body>
+
+</html>
