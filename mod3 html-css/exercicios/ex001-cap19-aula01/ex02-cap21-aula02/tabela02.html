@@ -14,6 +14,8 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+
         }
 
         td,
@@ -22,14 +24,35 @@
             padding: 10px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         thead,
         tfoot {
             background-color: gray;
             color: white;
         }
-        
-        td.num{
-          text-align: right;
+
+        thead>tr>th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
+        tbody tr:nth-child(odd) {
+            font-weight: bold;
+        }
+
+        tbody tr:nth-child(2n) {
+            background-color: lightgray;
+        }
+
+        td.num {
+            text-align: right;
         }
     </style>
 </head>
@@ -39,6 +62,7 @@
     <!--ANATOMIA DE TABELAS GRANDES
    
    TABLE 
+   CAPTION(LEGENDA)
    T HEAD(CABECA)
  <tr>, <td>, <th>
 
@@ -48,10 +72,11 @@
    T FOOT(RODAPE)
 <tr>, <td>, <th> -->
     <table>
+        <caption>Populacao das unidades federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>Populacao</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">Populacao</th>
             </tr>
         </thead>
         <tbody>
@@ -161,16 +186,59 @@
             </tr>
             <tr>
                 <td>Roraima</td>
-                <td class="num">738 772	</td>
+                <td class="num">738 772 </td>
             </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes</th>
+                <th scope="row">Total de habitantes:</th>
                 <td class="num"><strong>213 421 037</strong></td>
             </tr>
         </tfoot>
     </table>
+    <!--PARAGRAFOS PARA TESTAR O SCROLLING DA TABELA-->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat nemo debitis aperiam nostrum
+        consequatur iusto, culpa recusandae. Eius quia iusto, vitae sapiente dolor quae totam blanditiis ea non
+        accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat veritatis doloribus dolorum, ullam
+        exercitationem molestias laboriosam, ipsum nostrum blanditiis quo placeat tenetur hic atque consequuntur,
+        tempore quam eveniet voluptatem neque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+        ratione dicta ea qui totam quibusdam, assumenda commodi repellendus voluptatibus, amet maiores illo alias ad at
+        iste veritatis labore quaerat blanditiis?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam
+        consequuntur a nemo amet, sit tempore assumenda iste quo perspiciatis molestias, officiis, cupiditate tempora
+        ex. Aut reiciendis architecto sunt distinctio doloribus!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat nemo debitis aperiam nostrum
+        consequatur iusto, culpa recusandae. Eius quia iusto, vitae sapiente dolor quae totam blanditiis ea non
+        accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat veritatis doloribus dolorum, ullam
+        exercitationem molestias laboriosam, ipsum nostrum blanditiis quo placeat tenetur hic atque consequuntur,
+        tempore quam eveniet voluptatem neque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+        ratione dicta ea qui totam quibusdam, assumenda commodi repellendus voluptatibus, amet maiores illo alias ad at
+        iste veritatis labore quaerat blanditiis?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam
+        consequuntur a nemo amet, sit tempore assumenda iste quo perspiciatis molestias, officiis, cupiditate tempora
+        ex. Aut reiciendis architecto sunt distinctio doloribus!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat nemo debitis aperiam nostrum
+        consequatur iusto, culpa recusandae. Eius quia iusto, vitae sapiente dolor quae totam blanditiis ea non
+        accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat veritatis doloribus dolorum, ullam
+        exercitationem molestias laboriosam, ipsum nostrum blanditiis quo placeat tenetur hic atque consequuntur,
+        tempore quam eveniet voluptatem neque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+        ratione dicta ea qui totam quibusdam, assumenda commodi repellendus voluptatibus, amet maiores illo alias ad at
+        iste veritatis labore quaerat blanditiis?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam
+        consequuntur a nemo amet, sit tempore assumenda iste quo perspiciatis molestias, officiis, cupiditate tempora
+        ex. Aut reiciendis architecto sunt distinctio doloribus!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat nemo debitis aperiam nostrum
+        consequatur iusto, culpa recusandae. Eius quia iusto, vitae sapiente dolor quae totam blanditiis ea non
+        accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat veritatis doloribus dolorum, ullam
+        exercitationem molestias laboriosam, ipsum nostrum blanditiis quo placeat tenetur hic atque consequuntur,
+        tempore quam eveniet voluptatem neque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+        ratione dicta ea qui totam quibusdam, assumenda commodi repellendus voluptatibus, amet maiores illo alias ad at
+        iste veritatis labore quaerat blanditiis?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam
+        consequuntur a nemo amet, sit tempore assumenda iste quo perspiciatis molestias, officiis, cupiditate tempora
+        ex. Aut reiciendis architecto sunt distinctio doloribus!</p>
+
+ <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat nemo debitis aperiam nostrum consequatur iusto, culpa recusandae. Eius quia iusto, vitae sapiente dolor quae totam blanditiis ea non accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat veritatis doloribus dolorum, ullam exercitationem molestias laboriosam, ipsum nostrum blanditiis quo placeat tenetur hic atque consequuntur, tempore quam eveniet voluptatem neque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus ratione dicta ea qui totam quibusdam, assumenda commodi repellendus voluptatibus, amet maiores illo alias ad at iste veritatis labore quaerat blanditiis?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam consequuntur a nemo amet, sit tempore assumenda iste quo perspiciatis molestias, officiis, cupiditate tempora ex. Aut reiciendis architecto sunt distinctio doloribus!</p>
+
 
 </body>
 
